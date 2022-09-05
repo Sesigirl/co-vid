@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--
+  Created by: Kathato Mthethwa
+  File Name: contact.html
+  Date: 08/03/2022
+  -->
+<html lang="en">
+<head>
+  <title>Contact Us | Company of Virtual Dancers</title>
+  <meta charset="utf-8">
+  <!-- "INSERT <meta name="description" content=""> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Acme&family=Ubuntu&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="shortcut icon" href="images/favicon_io/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
+  <link rel="icon" sizes="192x192" href="images/favicon_io/android-chrome-192.png">
+</head>
+
+<body>
+
+  <a class="skip" href="#content">Skip to Content</a>
+
+  <header>
+    <a href="index.html"><img src ="images/company-of-virtual-dancers-logo-blue.png" alt="Company of Virtual Dancers logo"></a>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="classes.html">Classes</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <div> <!-- Hero Image -->
+    <img>
+  </div>
+
+  <main>
+    <div id="contact">
+      <h1>Want to find out more? Contact us!</h1>
+        <h4 class="mobile">Call or text us at:</h4>
+        <a href="tel:+18472208385">+1 (847) 220-8385</a>
+
+        <h4 class="mobile">Send us an email at:</h4>
+        <a href="mailto:covirtualdancers@gmail.com" target="_blank">covirtualdancers@gmail.com</a>
+    </div>
+
+    <div id="form">
+      <h2>Want to join us? Register for free!</h2>
+
+      <form class="form-grid" data-netlify="true"><!-- Start Form -->
+
+        <fieldset>
+          <legend>Your Information</legend>
+
+          <label for="name">Name:</label>
+          <input type="text" name="name" id="name" required>
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" name="phone" id="phone" required>
+        </fieldset>
+
+        <fieldset>
+          <legend>Referrals and Questions</legend>
+          <label for="referral">How did you find us?</label>
+          <select name="referral" id="referral">
+              <option value="friend">Friend</option>
+              <option value="google">Google</option>
+              <option value="us">Us</option>
+              <option value="other">Other</option>
+          </select>
+
+          <label for="question">Any Questions?</label>
+          <textarea id="questions" name="questions" rows="5" cols="30"></textarea>
+
+        </fieldset>
+
+        <input type="submit" id="submit" value="Let's Dance!" class="btn">
+
+      </form>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>Can't wait to move with you!</p>
+  </footer>
+
+</body>
+
+</html>

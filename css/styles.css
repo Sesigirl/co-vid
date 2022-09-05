@@ -1,0 +1,348 @@
+/*
+Created by: Kathato Mthethwa
+File Name: contact.html
+Date: 08/03/2022
+*/
+
+/* CSS Reset */
+body, header, nav, main, footer, h2, h4, div, img, ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Style rules for body and images */
+body {
+  background-color: #22C2C2;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Style rules for box sizing applies to all elements */
+* {
+  box-sizing: border-box;
+}
+
+/* Style rules for skip navigation link */
+.skip {
+  position: absolute;
+  left: -999px;
+}
+
+.skip:focus {
+  color: #fff;
+  background-color: #fff;
+  text-decoration: none;
+  padding: 0.5%;
+  top: auto;
+  left: auto;
+  right: 190px;
+  z-index: 1;
+}
+
+/* Styles rules for header */
+header {
+  top: 0;
+  height: 185px;
+}
+
+header img {
+  margin: 0 auto;
+}
+
+/* Style rules for nav area */
+nav {
+  padding: 1%;
+  margin-bottom: 1%;
+}
+
+nav ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+nav li {
+  font-size: 1.5em;
+  font-family: 'Acme', sans-serif;
+  border-top: 3px dotted #365B6D;
+}
+
+nav li:first-child {
+  border-top: none;
+}
+
+nav li a {
+  display: block;
+  padding: 0.5em 1em;
+  color: #000;
+  text-decoration: none;
+}
+
+nav li a:active {
+  color: #F4B324;
+}
+
+/* Show mobile class, hide tab-desk class */
+.mobile {
+  display: block;
+}
+
+.tab-desk {
+  display: none;
+}
+
+/* Style rules for main content */
+main {
+  background-color: #fff;
+  margin: 5%;
+  padding: 2%;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#action {
+  text-align: center;
+  margin: 2%;
+  color: #F4B324;
+}
+
+#intro-banner {
+  border: 5px dotted #F4B324;
+  padding: 2%;
+  margin: 2%;
+}
+
+#intro-banner h1, #intro-banner h2 {
+  text-align: center;
+  color: #CB6CE6;
+}
+
+/* #intro-banner h2 {
+  text-align: center;
+  color: #22C2C2;
+} */
+
+#contact, #nav-btn {
+  padding: 2%;
+  margin: 0 auto;
+  width: auto;
+  text-align: center;
+}
+
+#contact h2, #nav-btn h2 {
+  margin-bottom: 2%;
+  font-size: 1.5em;
+  color: #365B6D;
+}
+
+#contact h4, #nav-btn h4 {
+  font-size: 1.35em;
+  color: #365B6D;
+}
+
+#contact a, #nav-btn a {
+  color: #22C2C2;
+  text-decoration: none;
+  font-size: 1.25em;
+  padding: 1%;
+  margin: 0.35em;
+  display: inline-block;
+  border-radius: 8px;
+}
+
+#contact a:hover, #nav-btn a:hover {
+  background-color: #22C2C2;
+  border: none;
+  color: #fff;
+}
+
+#contact a:active, #nav-btn a:active {
+  border: none;
+  color: #365B6D;
+}
+
+/* Style rules for form elements */
+#form {
+  border: 5px dotted #CB6CE6;
+  padding: 2%;
+  text-align: center;
+}
+
+#form h1 {
+  text-align: center;
+  margin-bottom: 2%;
+  color: #F4B324;
+}
+
+form {
+  width: auto;
+  margin: auto;
+}
+
+fieldset, input, select, textarea {
+  margin-bottom: 2%;
+}
+
+fieldset, legend {
+  font-size: 1.1em;
+  color: #CB6CE6;
+}
+
+label {
+  display: block;
+  padding-top: 1%;
+}
+
+.btn {
+  grid-column: 1 / span 2;
+  background-color: #F4B324;
+  color: #fff;
+}
+
+.btn:hover {
+  color: #CB6CE6;
+}
+
+.btn:active {
+  background-color: #CB6CE6;
+  color: #F4B324;
+}
+
+form #submit {
+  margin: 0 auto;
+  border: none;
+  display: block;
+  padding: 2%;
+  font-size: 1.5em;
+  border-radius: 10px;
+}
+
+/* Style rules for footer content */
+footer {
+  color: #fff;
+  font-size: 1em;
+  font-family: 'Ubuntu', sans-serif;
+  text-align: center;
+}
+
+footer p a {
+  text-decoration: none;
+  color: #fff;
+}
+
+footer p a:active {
+  color: #365B6D;
+}
+
+/* Media Query for Tab-Desk */
+@media screen and (min-width: 975px), print {
+
+  /* Tab-Desk Viewport: show tab-desk class, hide mobile class */
+  .tab-desk {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  /* Tab-Desk Viewport: Style rules for header */
+  header {
+    width: 25%;
+    float: left;
+  }
+
+  /* Tab-Desk Viewport: Style rules for nav area */
+  nav {
+    width: 70%;
+    float: right;
+    margin: 1.5em 1em 1em 0;
+    font-size: 1.5em;
+  }
+
+  nav li {
+    display: inline-block;
+    padding: 2%;
+    border-top: none;
+    border-right: 4px dotted #fff;
+    font-family: 'Acme', sans-serif;
+  }
+
+  nav li:last-child {
+    border-right: none;
+  }
+
+  nav li a {
+    padding: 0.5em 1em;
+  }
+
+  nav li a:hover {
+    color: #F4B324;
+  }
+
+  nav li a:active {
+    color: #EA9A12;
+  }
+
+  /* Tab-Desk Viewport: Style rules for main area */
+  main {
+    clear: left;
+    display: block;
+  }
+
+  /* Tab-Desk Viewport: Style rules for contact page */
+  #contact a, #nav-btn a {
+    border: 3px solid #365B6D;
+    border-radius: 8px;
+  }
+
+  /* Tab-Desk Viewport: Style rules for table */
+  table {
+    border: 5px dotted #CB6CE6;
+    margin: auto;
+    width: 100%;
+  }
+
+  caption {
+    font-size: 2em;
+    padding: 1%;
+    color: #F4B324;
+  }
+
+  th, td {
+    padding: 2%;
+    color: #000;
+    text-align: center;
+  }
+
+  th {
+    background-color: #F4B324;
+    font-size: 1.25em;
+  }
+
+  td {
+    font-size: 1.15em;
+  }
+
+  tr:nth-child(odd) {
+    background-color: #F8D485;
+  }
+
+  /* Tab-Desk Viewport: Style rules for form elements */
+  .form-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+  }
+
+  footer p a:hover {
+    color: #5E17EB;
+  }
+
+  footer p a:active {
+    color: #365B6D;
+  }
+
+}
