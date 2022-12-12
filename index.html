@@ -18,6 +18,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
   <link rel="icon" sizes="192x192" href="images/favicon_io/android-chrome-192.png">
+  <script src="jquery-min-3.6.1.js"></script>
+  <script src="signin.js" defer></script>
+  <script src="calendar.js" defer></script>
 </head>
 
 <body>
@@ -26,12 +29,16 @@
 
   <header>
     <a href="index.html"><img src ="images/company-of-virtual-dancers-logo-blue.png" alt="Company of Virtual Dancers logo"></a>
+    <div id="signinBtn" class="btn">Sign In</div>
+    <div id="nosignin"></div>
   </header>
 
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="classes.html">Classes</a></li>
+      <li><a href="challenges.html">Workout Challenges</a></li>
+      <li class="student-only"><a href="showcases.html">Showcases</a></li>
       <li><a href="contact.html">Contact Us</a></li>
     </ul>
   </nav>
@@ -50,12 +57,40 @@
     <h2>We started dancing with our friends via video conference in May of 2020 to stay active during the COVID-19 pandemic, and we haven't looked back! Now we're offering free, fun classes for children and adults in the convenience of your own home. Learn fun dance moves and work out to heart-pumping music.</h2>
 
     <div id="action">
-      <h2>Are you ready to join us?</h2>
+      <h1>Are you ready to join us?</h1>
     </div>
 
     <div id="nav-btn">
       <a href="classes.html"><h3>Click here to find out more about our classes!</h3></a>
       <a href="contact.html"><h3>Click here to find out how you can join us!</h3></a>
+    </div>
+
+    <div class="tab-desk">
+      <table class="class-calendar">
+        <caption>Class Calendar (Times in CST)</caption>
+        <thead>
+          <tr>
+            <th>SUN</th>
+            <th>MON</th>
+            <th>TUES</th>
+            <th>WED</th>
+            <th>THU</th>
+            <th>FRI</th>
+            <th>SAT</th>
+          </tr>
+        </thead>
+        <tbody id="calendar-body"></tbody>
+    </table>
+
+    <table class="calendar-code">
+      <tr>
+        <td class="calendar-today">Today</td>
+        <td class="calendar-class-day">Class</td>
+        <td>No Class</td>
+        <td class="calendar-class-cancelled">Class Canceled/Break</td>
+      </tr>
+    </table>
+  </div>
 
   </main>
 

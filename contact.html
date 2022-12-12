@@ -18,6 +18,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
   <link rel="icon" sizes="192x192" href="images/favicon_io/android-chrome-192.png">
+  <script src="jquery-min-3.6.1.js"></script>
+  <script src="signin.js" defer></script>
+  <script src="contact-validation.js" defer></script>
 </head>
 
 <body>
@@ -26,12 +29,16 @@
 
   <header>
     <a href="index.html"><img src ="images/company-of-virtual-dancers-logo-blue.png" alt="Company of Virtual Dancers logo"></a>
+    <div id="signinBtn" class="btn">Sign In</div>
+    <div id="nosignin"></div>
   </header>
 
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="classes.html">Classes</a></li>
+      <li><a href="challenges.html">Workout Challenges</a></li>
+      <li class="student-only"><a href="showcases.html">Showcases</a></li>
       <li><a href="contact.html">Contact Us</a></li>
     </ul>
   </nav>
@@ -58,11 +65,13 @@
         <fieldset>
           <legend>Your Information</legend>
 
-          <label for="name">Name:</label>
-          <input type="text" name="name" id="name" required>
+          <label for="name">Name: *</label>
+          <span class="err-msg" id="err-name"></span><br/>
+          <input type="text" name="name" id="name" pattern="^[A-Za-z ]{2,20}$" required>
 
-          <label for="phone">Phone Number:</label>
-          <input type="tel" name="phone" id="phone" required>
+          <label for="phone">Phone Number: *</label>
+          <span class="err-msg" id="err-phone"></span><br/>
+          <input type="tel" name="phone" id="phone" pattern="^\d+{7,15}$" required>
         </fieldset>
 
         <fieldset>
@@ -76,8 +85,8 @@
           </select>
 
           <label for="question">Any Questions?</label>
-          <textarea id="questions" name="questions" rows="5" cols="30"></textarea>
-
+          <span class="err-msg" id="err-textarea"></span><br/>
+          <textarea id="questions" name="questions" rows="5" cols="32" pattern="^\d+[A-Za-z ]{0,160}$" ></textarea>
         </fieldset>
 
         <input type="submit" id="submit" value="Let's Dance!" class="btn">

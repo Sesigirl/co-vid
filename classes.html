@@ -18,6 +18,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
   <link rel="icon" sizes="192x192" href="images/favicon_io/android-chrome-192.png">
+  <script src="jquery-min-3.6.1.js"></script>
+  <script src="signin.js" defer></script>
 </head>
 
 <body>
@@ -26,12 +28,16 @@
 
   <header>
     <a href="index.html"><img src ="images/company-of-virtual-dancers-logo-blue.png" alt="Company of Virtual Dancers logo"></a>
+    <div id="signinBtn" class="btn">Sign In</div>
+    <div id="nosignin"></div>
   </header>
 
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="classes.html">Classes</a></li>
+      <li><a href="challenges.html">Workout Challenges</a></li>
+      <li class="student-only"><a href="showcases.html">Showcases</a></li>
       <li><a href="contact.html">Contact Us</a></li>
     </ul>
   </nav>
@@ -43,12 +49,18 @@
   <main>
 
     <div class="mobile">
-      <img src="images/fall-22-schedule.jpg" alt="Fall/Winter 2022 Class Schedule">
+      <img id="classes-img" src="images/fall-22-schedule.jpg" alt="Fall/Winter 2022 Class Schedule">
     </div>
+
+    <div id="zoomBtn" class="student-only"><a href="https://us02web.zoom.us/j/8568365033">
+      <h4>Zoom infomation</h4>
+      <h4>Meeting ID: 856 836 5033</h4>
+      <h4>Password: 187860</h4>
+    </a></div>
 
     <div class="tab-desk">
 
-      <table><!-- Start table -->
+      <table class="class-schedule"><!-- Start table -->
         <caption>Company Class Schedule</caption>
         <tr><!-- Row 1 -->
           <th>Class</th>
