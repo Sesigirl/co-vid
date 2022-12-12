@@ -13,11 +13,9 @@ $(document).ready(function() {
 
     // Parse virtual-dancers.json JSON file with students' names
     let namesJSONObj = JSON.parse(namesJSON);
-    let userInputPattern = /^[A-Za-z ]{2,20}$/;
 
     function signinUser() {
         let userInput = localStorage.getItem("username");
-        if (userInputPattern.test(userInput) === true){
                 for (let i = 0; i < namesJSONObj.roster.length; i++) {
                 if (userInput === namesJSONObj.roster[i]["username"]) {
                     $(".student-only").show();
@@ -32,7 +30,6 @@ $(document).ready(function() {
                     break;
                 }
             }
-        }
     }
 
     // Event handler: Check local storage for username on load
