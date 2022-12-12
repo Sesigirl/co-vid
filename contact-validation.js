@@ -66,7 +66,7 @@ $(document).ready(function() {
         }
 
         if (errorNum > 0) {
-            $contactForm.prepend("<div class='err-msg'>Please correct errors before submitting.</div>");
+            $form.prepend("<div class='err-msg'>Please correct errors before submitting.</div>");
             event.preventDefault();
         }
     });
