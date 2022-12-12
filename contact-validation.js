@@ -38,7 +38,6 @@ $(document).ready(function() {
         let errorNum = 0;
         let namePattern = /^[A-Za-z ]{2,20}$/;
         let phonenumPattern = /^\d+$/;
-        let questionsPattern = /^\d+[A-Za-z ]{0,160}$/;
 
         $(".fields").css("background-color", fieldColor);
         $(".err-msg").empty();
@@ -57,16 +56,8 @@ $(document).ready(function() {
             errorNum ++;
         }
 
-        if ($textareaVal.val().length >= 0) {
-            if (!(questionsPattern.test($textareaVal.val()))) {
-                $errTextArea.append("Must contain only letters and spaces - maximum 160 characters.");
-                $textareaVal.css("background-color", errorBkgdColor);
-                errorNum ++;
-            }
-        }
-
         if (errorNum > 0) {
-            $form.prepend("<div class='err-msg'>Please correct errors before submitting.</div>");
+            $form.append("<div class='err-msg'>Please correct errors before submitting.</div>");
             event.preventDefault();
         }
     });
