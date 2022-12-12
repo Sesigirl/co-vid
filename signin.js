@@ -7,7 +7,6 @@
 $(document).ready(function() {
     let $nosignin = $("#nosignin");
     
-    $(".student-only").hide();
     // names of students stored in JSON form
     let namesJSON = '{ "roster": [{"username": "Blossom Lee"},{"username": "Carla Smith"},{"username": "Claire Teske"},{"username": "Eleanor Scott"},{"username": "Elizabeth (Kaylin)"},{"username": "Emily K. Kelps"},{"username": "Fiona Patel"},{"username": "Glennda Janessa McMillian"},{"username": "Kathato Mthethwa"},{"username": "Kris Colon"},{"username": "Kyria Green"},{"username": "Lin Minna"},{"username": "Linna Huangfu"},{"username": "Lorraine Bowman"},{"username": "N Mthethwa"},{"username": "Orrianna Stevens"},{"username": "Rebekah Cyncar"},{"username": "Sierra Williams"},{"username": "Stephanie Balfour"},{"username": "Tara Walters"},{"username": "Tyler Mullins"},{"username": "Vanessa Grimm"},{"username": "Vivian"},{"username": "Yvette Ramirez"}]}';
 
