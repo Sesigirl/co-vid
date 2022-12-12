@@ -57,7 +57,7 @@ $(document).ready(function() {
         }
 
         if (errorNum > 0) {
-            $form.append("<div class='err-msg'>Please correct errors before submitting.</div>");
+            $form.append('<div class="err-msg">Please correct errors before submitting.</div>');
             event.preventDefault();
         }
     });
