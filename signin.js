@@ -28,7 +28,6 @@ $(document).ready(function() {
                     $nosignin.show();
                     $nosignin.html("Looks like you haven't registered. See the contact page to register!");
                     let timedDelete = window.setTimeout(function(){$nosignin.hide();}, 6000);
-                    break;
                 }
             }
         }
