@@ -14,6 +14,7 @@ $(document).ready(function() {
     let namesJSONObj = JSON.parse(namesJSON);
     let userInputPattern = /^[A-Za-z ]{2,20}$/;
 
+    $(".student-only").hide();
     function signinUser() {
         let userInput = localStorage.getItem("username");
         if (userInputPattern.test(userInput) === true){
@@ -21,13 +22,14 @@ $(document).ready(function() {
                 if (userInput === namesJSONObj.roster[i]["username"]) {
                     $(".student-only").show();
                     signinBtn.textContent = "Hi, " + userInput;
-                    $nosignin.empty();
+                    $nosignin.hide();
                     break;
                 } else if (i === (namesJSONObj.roster.length - 1) && userInput !== null) {
                     signinBtn.textContent = "Sign In";
                     $nosignin.show();
                     $nosignin.html("Looks like you haven't registered. See the contact page to register!");
                     let timedDelete = window.setTimeout(function(){$nosignin.hide();}, 6000);
+                    break;
                 }
             }
         }
