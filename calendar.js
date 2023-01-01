@@ -31,7 +31,7 @@ for (let i = 0; i < 6; i++) {
             if (date === today.getDate() ) {
                 $(cell).addClass("calendar-today"); 
             } 
-            if (date === 5 || date === 6 || date === 7 || date === 26 || date === 27 || date === 28) {
+            if (date === 2 || date === 3 || date === 4 || date === 9 || date === 10 || date === 11) {
                 $(cell).addClass("calendar-class-cancelled");
             } else if (j === 1 || j === 2 || j === 3) {
                 $(cell).addClass("calendar-class-day");
